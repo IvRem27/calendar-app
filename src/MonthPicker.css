@@ -1,0 +1,12 @@
+#monthPicker {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    color: white;
+}
+
+#monthPicker svg {
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+}

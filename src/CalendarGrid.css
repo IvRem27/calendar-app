@@ -1,0 +1,41 @@
+.week {
+    display: flex;
+    flex-flow: row nowrap;
+    flex-grow: 0;
+    flex-shrink: 1;
+    height: 80px;
+}
+
+#weekDayNames {
+    height: 30px !important;
+}
+
+.shadowed {
+    background-color: grey !important;
+}
+
+.dayName {
+    text-align: center;
+    background-color: #f78205 !important;
+    cursor: default !important;
+}
+
+.day {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 7em;
+    color: white;
+    padding: 5px;
+    background-color: #03b6fc;
+    box-shadow:
+        -1px -1px #F9A440,
+        inset -1px -1px 0 0 #F9A440;
+    cursor: pointer;
+}
+
+#month {
+    max-width: 848px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
