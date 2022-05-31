@@ -26,12 +26,7 @@ class MonthPicker extends React.Component {
     async getGithubCommits(startDate) {
         const lastDateOfMonth = startDate.clone().endOf('M')
         try {
-            let config = {
-                headers: {
-                    Authorization: "token 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"
-                }
-            }
-            const response = await axios.get(`https://api.github.com/repos/sequelize/sequelize/commits?since=${startDate.format("YYYY-MM-DD")}&until=${lastDateOfMonth.format("YYYY-MM-DD")}`, config)
+            const response = await axios.get(`https://api.github.com/repos/sequelize/sequelize/commits?since=${startDate.format("YYYY-MM-DD")}&until=${lastDateOfMonth.format("YYYY-MM-DD")}`)
             const map = {}
             response.data.forEach((entry) => {
                 const date = moment(entry.commit.committer.date).format("YYYY-MM-DD")
